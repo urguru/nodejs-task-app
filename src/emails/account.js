@@ -9,7 +9,7 @@ const sendWelcomeEmail=(email,name)=>{
         from:'guruprasadbv4648@gmail.com',
         subject:'Thanks for joining in',
         text:`Welcome to the App ${name}. Let me know how you get along with the app`
-    }).then((s)=>console.log("Successfylly sent"))
+    })
 }
 
 
@@ -21,7 +21,6 @@ const sendAccountDeleteEmail=(email,name)=>{
         subject: "We will miss you",
         text: `We are sorry to see you go.We wish we could keep you longer ${name}`,
       })
-      .then((s) => console.log("Successfylly sent"));
 }
 
 module.exports = {

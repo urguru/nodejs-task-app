@@ -1,4 +1,5 @@
-const taskRouter = new require("express").Router();
+const express = require("express");
+const taskRouter = new express.Router();
 const Task = require("../models/task");
 const auth = require("../middleware/auth");
 
