@@ -8,6 +8,8 @@ const {
   sendWelcomeEmail,
   sendAccountDeleteEmail,
 } = require("../emails/account");
+
+
 userRouter.post("/users", async (req, res) => {
   const user = new User(req.body);
   try {
@@ -96,7 +98,6 @@ const upload_profile_pic = multer({
     if (!file.originalname.match(/.*\.(jpeg|jpg|png)$/)) {
       return cb(new Error("Please upload a jpg/jpeg/png files only"));
     }
-
     cb(undefined, true);
   },
 });
